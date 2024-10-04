@@ -8,7 +8,7 @@ import Register from '../Pages/Register';
 // import Category from '../Pages/Category';
 
 
-const Router1=()=>{
+const Router=()=>{
     return (<>
     <Links/>
     <Routes>
@@ -20,4 +20,4 @@ const Router1=()=>{
 }
 
 
-export default Router1;
+export default Router;
