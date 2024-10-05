@@ -23,14 +23,14 @@ function Register() {
 
     try{
 
-      await axios.post("http://localhost:3000/register",{
+      await axios.post("http://localhost:3000/api/users/register",{
         name,email,password
       })
       .then(res=>{
         if(res.data=="exists"){
           alert('User alredy exists')
         }
-        else if(res.data=="notexists"){
+        else if(res.data=="registered"){
           history("/")
         }
       })

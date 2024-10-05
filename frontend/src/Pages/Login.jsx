@@ -17,7 +17,7 @@ function Login(){
 
     try{
 
-      await axios.post("http://localhost:3000/login",{
+      await axios.post("http://localhost:3000/api/users/login",{
         email,password
       })
       .then(res=>{

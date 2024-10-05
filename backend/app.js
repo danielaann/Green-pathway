@@ -9,58 +9,72 @@ const multer = require ('multer')
 const uploadMiddleware = multer({dest:'upload/'})
 const fs = require('fs')
 const Post = require('./mongoose')
+const connectDB = require('./config/database');
+const userRoutes = require('./routes/userRoutes');
+const postRoutes = require('./routes/postRoutes');
 
+
+connectDB();
+
+// Routes
+app.use('/api/users', userRoutes);
+app.use('/api/posts', postRoutes);
+
+// Start the server
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
 
 //for Login
-app.get("/",cors(),(req,res)=>{
+// app.get("/",cors(),(req,res)=>{
 
-})
+// })
 
-app.post("/login", async (req,res)=>{
-    const{email,password}=req.body;
+// app.post("/login", async (req,res)=>{
+//     const{email,password}=req.body;
 
-    try{
-        // check if email is same
-        const check=await collection.findOne({email:email})
-        if (check){
-            res.json("exists")
-        }
-        else{
-            res.json("notexists")
-        }
+//     try{
+//         // check if email is same
+//         const check=await collection.findOne({email:email})
+//         if (check){
+//             res.json("exists")
+//         }
+//         else{
+//             res.json("notexists")
+//         }
 
-    }catch(e){
-        res.json("notexists")
-    }
-})
+//     }catch(e){
+//         res.json("notexists")
+//     }
+// })
 
-//for Register
+// //for Register
 
-app.post("/register",async (req,res)=>{
-    const{name,email,password}=req.body
+// app.post("/register",async (req,res)=>{
+//     const{name,email,password}=req.body
 
-    //making new user
-    const data={
-        name:name,
-        email:email,
-        password:password
-    }
+//     //making new user
+//     const data={
+//         name:name,
+//         email:email,
+//         password:password
+//     }
 
-    try{
-        // check if email is same
-        const check=await collection.findOne({email:email})
-        if (check){
-            res.json("exists")
-        }
-        else{
-            res.json("notexists")
-            await collection.insertMany([data])
-        }
+//     try{
+//         // check if email is same
+//         const check=await collection.findOne({email:email})
+//         if (check){
+//             res.json("exists")
+//         }
+//         else{
+//             res.json("notexists")
+//             await collection.insertMany([data])
+//         }
 
-    }catch(e){
-        res.json("notexists")
-    }
-})
+//     }catch(e){
+//         res.json("notexists")
+//     }
+// })
 
 // app.post('/post', uploadMiddleware.single('file'),async (req,res)=>{
 //     const {originalname} = req.file;
@@ -96,7 +110,7 @@ app.post("/register",async (req,res)=>{
 
 // app.use('/uploads',express.static(__dirname + '/uploads'))
 
-app.listen(3000,()=>{
-    console.log('Port connecvted');
-})
+// app.listen(3000,()=>{
+//     console.log('Port connecvted');
+// })
 
