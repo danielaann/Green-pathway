@@ -7,7 +7,7 @@ export default function Post({_id,title,summary,content,cover,createdAt,author})
             {/* Takes to that specific post's id */}
             <Link to={  `/post/${_id} `}>
             {/* // chech port */}
-              <img src={'http://localhost:4000/'+cover} alt=""/>  
+              <img src={'http://localhost:3000/'+cover} alt=""/>  
             </Link>       
           </div>
           <div className='texts'>

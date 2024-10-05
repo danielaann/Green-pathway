@@ -5,6 +5,10 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extented: true}))
 app.use(cors())
+const multer = require ('multer')
+const uploadMiddleware = multer({dest:'upload/'})
+const fs = require('fs')
+const Post = require('./mongoose')
 
 
 //for Login
@@ -58,39 +62,39 @@ app.post("/register",async (req,res)=>{
     }
 })
 
-app.post('/post', uploadMiddleware.single(file),async (req,res)=>{
-    const {originalname} = req.file;
-    const parts = originalname.split('.');
-    const ext = parts[parts.lenght - 1];
-    const newPath = path+'.'+ext;
-    fs.renameSync(path,newPath);
+// app.post('/post', uploadMiddleware.single('file'),async (req,res)=>{
+//     const {originalname} = req.file;
+//     const parts = originalname.split('.');
+//     const ext = parts[parts.lenght - 1];
+//     const newPath = path+'.'+ext;
+//     fs.renameSync(path,newPath);
 
-    const{title,summary,content,author} = req.body;
-    const postDoc = await Post.create({
-        title,
-        summary,
-        content,
-        cover:newPath,
-        author,
-    })
+//     const{title,summary,content,author} = req.body;
+//     const postDoc = await Post.create({
+//         title,
+//         summary,
+//         content,
+//         cover:newPath,
+//         author,
+//     })
 
-    res.json(postDoc);
+//     res.json(postDoc);
 
 
-})
+// })
 
-app.length('/post',async(req,res)=>{
-    const posts = await Post.find().sort({createdAt: -1}).limit(10);
-    res.json(posts);
-})
+// app.get('/post',async(req,res)=>{
+//     const posts = await Post.find().sort({createdAt: -1}).limit(10);
+//     res.json(posts);
+// })
 
-app.get('/post/:id', async(req,res)=>{
-    const {id} = req.params
-    const postDoc = await Post.findById({IdleDeadline}).popular('author');
-    res.json(postDoc)
-})
+// app.get('/post/:id', async(req,res)=>{
+//     const {id} = req.params
+//     const postDoc = await Post.findById({IdleDeadline}).popular('author');
+//     res.json(postDoc)
+// })
 
-app.use('/uploads',express.static(__dirname + '/uploads'))
+// app.use('/uploads',express.static(__dirname + '/uploads'))
 
 app.listen(3000,()=>{
     console.log('Port connecvted');

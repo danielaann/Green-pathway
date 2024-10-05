@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { useEffect } from "react"
 
 export default function PostPage(){
     const [postInfo,setPostInfo] = useState(null);

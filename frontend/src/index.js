@@ -8,6 +8,7 @@ import { BrowserRouter} from 'react-router-dom';
 import Router from './Navigation/Router.js';
 import Quiz from './quizes/Quiz.js';
 import SelectQuiz from './quizes/SelectQuiz.js';
+
 ReactDOM.render(
   <>
     <BrowserRouter>

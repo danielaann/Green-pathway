@@ -32,7 +32,7 @@ export default function CreatePost(){
         data.set('title',title);
         data.set('summary',summary);
         data.set('content',content);
-        data,set('author',author)
+        data.set('author',author)
         data.set('file',files[0]);
         e.preventDefault();
         // chech port
@@ -41,7 +41,7 @@ export default function CreatePost(){
             body: data,
         });
         if(response.ok){
-            setRedirect:true;
+            setRedirect(true);
 
         }
     }

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Links=()=>{
     <>
     <Link exact path='/'>Home</Link>
-    <Link exact path='/landing'>Home</Link>
+    <Link path='/landing'>Start</Link>
     <Link path='/login'>Login</Link>
     <Link path='/register'>Register</Link>
     <Link path='/footprint'>Calculator</Link>
