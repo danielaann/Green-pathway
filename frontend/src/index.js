@@ -9,12 +9,15 @@ import Router from './Navigation/Router.js';
 // import Quiz from './Pages/Quiz.js';
 import Home from './Pages/Home.js';
 import Login from '../src/Pages/Login.jsx';
+import Start from './Pages/LoadIn.js';
 
 ReactDOM.render(
   <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Router/>
-    </BrowserRouter>
+    </BrowserRouter> */}
+
+    <Start/>
 
     {/* <Calcu/> */}
     {/* <PhoneSignin/> */}
