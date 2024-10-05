@@ -13,12 +13,11 @@ import Start from './Pages/LoadIn.js';
 
 ReactDOM.render(
   <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Router/>
-    </BrowserRouter> */}
+    </BrowserRouter>
 
-    <Start/>
-
+    {/* <Start/> */}
     {/* <Calcu/> */}
     {/* <PhoneSignin/> */}
     {/* <App/> */}
