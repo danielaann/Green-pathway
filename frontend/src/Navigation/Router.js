@@ -12,6 +12,8 @@ import Quiz2 from '../quizes/Quiz2';
 import Quiz3 from '../quizes/Quiz3';
 import Quiz4 from '../quizes/Quiz4';
 import Calcu from '../component/CarbonFootprint';
+import CreatePost from '../Pages/CreatePost';
+import PostPage from '../Pages/PostPage';
 
 
 const Router=()=>{
@@ -28,6 +30,8 @@ const Router=()=>{
         <Route path='/quiz2' element={<Quiz2/>}/>
         <Route path='/quiz3' element={<Quiz3/>}/>
         <Route path='/quiz4' element={<Quiz4/>}/>
+        <Route path='/create' element={<CreatePost/>}/>
+        <Route path ='/post/:id' element={<PostPage/>}/>
     </Routes>
     </> )
 }

@@ -26,3 +26,16 @@ const userSchema=new mongoose.Schema({
 const collection = mongoose.model("User",userSchema)
 
 module.exports=collection
+
+const PostSchema = new mongoose.Schema({
+    title: String,
+    summary:String,
+    content: String,
+    cover:String,
+    author:String,
+},{
+    timestamps:true,
+})
+
+const PostModel = mongoose.model('Post',PostSchema)
+module.exports = PostModel;

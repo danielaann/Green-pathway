@@ -15,6 +15,8 @@ const Links=()=>{
     <Link path='/quiz2'>Quiz2</Link>
     <Link path='/quiz3'>Quiz3</Link>
     <Link path='/quiz4'>Quiz4</Link>
+    <Link path='/create'>Create Post</Link>
+    <Link path='/post/:id'>Post</Link>
     </>
 }
 export default Links;

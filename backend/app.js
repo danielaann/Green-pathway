@@ -58,6 +58,41 @@ app.post("/register",async (req,res)=>{
     }
 })
 
+app.post('/post', uploadMiddleware.single(file),async (req,res)=>{
+    const {originalname} = req.file;
+    const parts = originalname.split('.');
+    const ext = parts[parts.lenght - 1];
+    const newPath = path+'.'+ext;
+    fs.renameSync(path,newPath);
+
+    const{title,summary,content,author} = req.body;
+    const postDoc = await Post.create({
+        title,
+        summary,
+        content,
+        cover:newPath,
+        author,
+    })
+
+    res.json(postDoc);
+
+
+})
+
+app.length('/post',async(req,res)=>{
+    const posts = await Post.find().sort({createdAt: -1}).limit(10);
+    res.json(posts);
+})
+
+app.get('/post/:id', async(req,res)=>{
+    const {id} = req.params
+    const postDoc = await Post.findById({IdleDeadline}).popular('author');
+    res.json(postDoc)
+})
+
+app.use('/uploads',express.static(__dirname + '/uploads'))
+
 app.listen(3000,()=>{
     console.log('Port connecvted');
 })
+
