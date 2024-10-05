@@ -32,7 +32,7 @@ app.post("/login",async(req,res)=>{
 
 //for Register
 
-app.post("/register",(req,res)=>{
+app.post("/register",async (req,res)=>{
     const{name,email,password}=req.body
 
     //making new user
