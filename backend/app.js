@@ -12,8 +12,8 @@ app.get("/",cors(),(req,res)=>{
 
 })
 
-app.post("/login",async(req,res)=>{
-    const{email,password}=req.body
+app.post("/login", async (req,res)=>{
+    const{email,password}=req.body;
 
     try{
         // check if email is same

@@ -9,6 +9,11 @@ const Links=()=>{
     <Link exact path='/landing'>Home</Link>
     <Link path='/login'>Login</Link>
     <Link path='/register'>Register</Link>
+    <Link path='/quiz'>Quiz</Link>
+    <Link path='/quiz1'>Quiz1</Link>
+    <Link path='/quiz2'>Quiz2</Link>
+    <Link path='/quiz3'>Quiz3</Link>
+    <Link path='/quiz4'>Quiz4</Link>
     </>
 }
 export default Links;
