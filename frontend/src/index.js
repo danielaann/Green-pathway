@@ -6,23 +6,15 @@ import Calcu from './component/CarbonFootprint.jsx';
 // import PhoneSignin from './component/signing.jsx';
 import { BrowserRouter} from 'react-router-dom';
 import Router from './Navigation/Router.js';
-// import Quiz from './Pages/Quiz.js';
-import Home from './Pages/Home.js';
-import Login from '../src/Pages/Login.jsx';
-import Start from './Pages/LoadIn.js';
+import Quiz from './Pages/Quiz.js';
 
 ReactDOM.render(
   <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Router/>
-    </BrowserRouter>
-
-    {/* <Start/> */}
-    {/* <Calcu/> */}
-    {/* <PhoneSignin/> */}
-    {/* <App/> */}
-    {/* <Tempapp/>
-    <EnergyDashboard/> */}
+    </BrowserRouter> */}
+    
+    <Quiz/>
   </>,document.getElementById("root")
 );
 
