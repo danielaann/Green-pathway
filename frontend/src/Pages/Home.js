@@ -7,7 +7,7 @@ import Services from "../component/Services";
 
 const Home=()=>{
     return(
-        <div>
+        <div style={{backgroundColor:'#FAF9F6'}}>
             <section id='home' style={{backgroundImage:`url(${imgs})`}}>
                 <div className="container ">
                     <div className="row justify-content-center">
@@ -21,9 +21,6 @@ const Home=()=>{
                                 <div class="p-2 display-6"><b>Empowering You</b> to Tread Lightly</div>
                                 <div class="p-2 display-6"><i>Measure,Learn & Live Sustainably</i></div>
                                 <br></br>
-                            </div>
-                            <div className="button d-flex flex-row-reverse">
-                                <button className="btn btn-light me-4 rounded-pill px-4 py-2 ">Join Now</button>
                             </div>
                         </div>
                     </div>

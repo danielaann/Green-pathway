@@ -11,7 +11,7 @@ import Quiz from '../quizes/Quiz';
 import Quiz2 from '../quizes/Quiz2';
 import Quiz3 from '../quizes/Quiz3';
 import Quiz4 from '../quizes/Quiz4';
-// import Category from '../Pages/Category';
+import Calcu from '../component/CarbonFootprint';
 
 
 const Router=()=>{
@@ -22,6 +22,7 @@ const Router=()=>{
         <Route path='/landing' element={<Start/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/footprint' element={<Calcu/>}/>
         <Route path='/quiz' element={<SelectQuiz/>}/>
         <Route path='/quiz1' element={<Quiz/>}/>
         <Route path='/quiz2' element={<Quiz2/>}/>

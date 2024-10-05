@@ -2,6 +2,7 @@ import { useState } from "react"
 import Graph from "../Util/BarChart.js";
 import Chart from "chart.js/auto"
 import {Bar} from "react-chartjs-2"
+import Navbar from "../Navigation/NavBar.js";
 
 
 const Calcu=()=>{
@@ -36,9 +37,13 @@ const Calcu=()=>{
 
     return(
         <section class="h-100">
+            <div>
+                <Navbar/>
+            </div>
+            <br/><br/><br/><br/>
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-xl-10">
-                        <div class="card rounded-3 text-black" style={{backgroundColor:"lightgreen"}}>
+                        <div class="card rounded-3 text-black" style={{backgroundColor:"#dbfae1"}}>
                             <div  class="row g-0">
                                 <div class="col-lg-6">
                                     <div clas="card-body p-md-5 mx-md-4">
@@ -90,7 +95,7 @@ const Calcu=()=>{
                                     <Graph values={values}/>
                                 </div>
                                 {carbonFootprint !==null &&(
-                                    <div>
+                                    <div className="text-center">
                                         <h2>Your estimate carbon footprint is : {carbonFootprint.toFixed(2)} kg CO2 per week</h2>
                                     </div>
                                 )}

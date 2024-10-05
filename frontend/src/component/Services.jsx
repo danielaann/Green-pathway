@@ -6,7 +6,7 @@ const Services=()=>{
     return(
         <div>
             <section id="services">
-                <div className="container mb-5">
+                <div className="container mb-5" >
                     <div className="row">
                         <div className="col-12">
                             <h3 className="fs-5 text-center mb-0">Our Services</h3>
@@ -25,7 +25,7 @@ const Services=()=>{
                                     your daily activities and discover personalized 
                                     strategies for improvement. 
                                     </p>
-                                    <a href="#" className="btn btn-primary">Check this out</a>
+                                    <a href="./footprint" className="btn btn-primary">Check this out</a>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ const Services=()=>{
                                     and sustainable living, offering valuable tips to 
                                     make small changes that have a big impact.
                                     </p>
-                                    <a href="#" className="btn btn-primary">Check this out</a>
+                                    <a href="./quiz" className="btn btn-primary">Check this out</a>
                                 </div>
                             </div>
                         </div>

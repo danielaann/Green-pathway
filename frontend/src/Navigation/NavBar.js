@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-lg" style={{backgroundColor:"#96FF96"}}>
+    <nav class="navbar navbar-expand-lg" style={{backgroundColor:"#dbfae1"}}>
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
@@ -14,7 +14,7 @@ const Navbar = () => {
               <a class="nav-link" href="./quiz">Game Quiz</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./register">Register</a>
+              <a class="nav-link" href="./footprint">Carbon Footprint Calculaor</a>
             </li>
           </ul>
         </div>

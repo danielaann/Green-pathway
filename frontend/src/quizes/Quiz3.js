@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Question from "../component/Question";
 import Waterbank from "../Questions/Questionbank3";
 import Score from "../component/Score";
-import "./Quiz.css";
 
 class Quiz3 extends Component {
     constructor(props) {

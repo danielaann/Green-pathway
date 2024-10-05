@@ -6,7 +6,6 @@ import Recyclingbank from "../Questions/Questionbank2";
 import Waterbank from "../Questions/Questionbank3";
 import Susbank from "../Questions/Questionbank4";
 import Score from "../component/Score";
-import "./Quiz.css";
 
 class Quiz2 extends Component {
     constructor(props) {
