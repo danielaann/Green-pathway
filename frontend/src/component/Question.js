@@ -6,7 +6,7 @@ class Question extends Component{
         const {question, selectedOption, onOptionChange, onSubmit} = this.props;
 
         return(
-            <div style={{paddingLeft:'30%'}}>
+            <div>
                 <h3>Question {question.id}</h3>
                 <h5 className="mt-2">{question.question}</h5>
                 <form onSubmit={onSubmit} className="mt-2 mb-2">

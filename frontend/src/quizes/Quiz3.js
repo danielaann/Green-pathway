@@ -50,9 +50,11 @@ class Quiz3 extends Component {
     render() {
         const { questionBank, currentQuestion, selectedOption, score, quizEnd } =
             this.state;
-        return (
-            <div className="container">
-                <h1 className="diaplay-4 fw-4"><i>Quiz Time</i></h1>
+        return ( <>
+            <div className="container" style={{paddingTop:'10%', }}>
+                <div className="card px-4 py-2" style={{borderRadius: '25px', width:'50%',border: '5px solid', margin: 'auto'}}>
+                <h1 className="diaplay-4 fw-4 text-center"><i>Quiz Time</i></h1>
+                <br/><br/>
 
                 {!quizEnd ? (
                     <Question 
@@ -68,7 +70,9 @@ class Quiz3 extends Component {
                         className="score"
                     />
                 )}
+                </div>
             </div>
+           </> 
         );
     }
 }

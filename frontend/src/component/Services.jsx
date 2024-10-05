@@ -6,7 +6,7 @@ const Services=()=>{
     return(
         <div>
             <section id="services">
-                <div className="container mb-5" >
+                <div className="container py-5" >
                     <div className="row">
                         <div className="col-12">
                             <h3 className="fs-5 text-center mb-0">Our Services</h3>
