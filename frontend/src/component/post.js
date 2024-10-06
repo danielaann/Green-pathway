@@ -13,7 +13,7 @@ export default function Post({_id,title,summary,content,cover,createdAt,author})
             </Link>       
           </div>
           <div className='texts col-sm'>
-            <h2 className='display-5 fw-bold text-center'>{title}</h2>
+            <h5 className='fw-bold text-center'>{title}</h5>
             <p className='info'>
               <a className='author nav-link'>{author}</a> 
               {/* Gives a neat format for date and time */}

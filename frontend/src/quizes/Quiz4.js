@@ -50,29 +50,31 @@ class Quiz4 extends Component {
     render() {
         const { questionBank, currentQuestion, selectedOption, score, quizEnd } =
             this.state;
-        return ( <>
-            <div className="container" style={{paddingTop:'10%', }}>
-                <div className="card px-4 py-2" style={{borderRadius: '25px', width:'50%',border: '5px solid', margin: 'auto'}}>
-                <h1 className="diaplay-4 fw-4 text-center"><i>Quiz Time</i></h1>
-                <br/><br/>
+        return (<>
+            <section className="vh-100" style={{ backgroundImage: 'url(https://images.pexels.com/photos/479453/pexels-photo-479453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)' }}>
+                <div className="container" style={{ paddingTop: '10%', }}>
+                    <div className="card px-4 py-2" style={{ borderRadius: '25px', width: '50%', border: '2px solid', margin: 'auto' }}>
+                        <h1 className="diaplay-4 fw-4 text-center"><i>Quiz Time</i></h1>
+                        <br /><br />
 
-                {!quizEnd ? (
-                    <Question 
-                        question={questionBank[currentQuestion]}
-                        selectedOption={selectedOption}
-                        onOptionChange={this.handleOptionChange}
-                        onSubmit={this.handleFormSubmit}
-                    />
-                ) : (
-                    <Score
-                        score={score}
-                        onNextQuestion={this.handleNextQuestion}
-                        className="score"
-                    />
-                )}
+                        {!quizEnd ? (
+                            <Question
+                                question={questionBank[currentQuestion]}
+                                selectedOption={selectedOption}
+                                onOptionChange={this.handleOptionChange}
+                                onSubmit={this.handleFormSubmit}
+                            />
+                        ) : (
+                            <Score
+                                score={score}
+                                onNextQuestion={this.handleNextQuestion}
+                                className="score"
+                            />
+                        )}
+                    </div>
                 </div>
-            </div>
-           </> 
+            </section>
+        </>
         );
     }
 }

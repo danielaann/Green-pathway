@@ -17,7 +17,7 @@ const Home=()=>{
                                 <p><br/><br/><br/><br/></p>
                             </div>
                             <div class="d-flex align-items-end flex-column text-white">
-                                <div class="p-2"><h3 className="display-5"><b><i>Our Moto</i></b></h3></div>
+                                <div class="p-2"><h3 className="display-5"><b><i>Our Motto</i></b></h3></div>
                                 <div class="p-2 display-6"><b>Empowering You</b> to Tread Lightly</div>
                                 <div class="p-2 display-6"><i>Measure,Learn & Live Sustainably</i></div>
                                 <br></br>
