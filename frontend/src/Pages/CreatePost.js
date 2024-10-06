@@ -37,7 +37,7 @@ export default function CreatePost(){
         data.set('file',files[0]);
         e.preventDefault();
         // chech port
-        const response = await fetch('http://localhost:3000/api/posts/',{
+        const response = await fetch('http://localhost:3000/api/posts',{
             method:'POST',
             body: data,
         });

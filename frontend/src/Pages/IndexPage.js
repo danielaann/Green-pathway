@@ -1,5 +1,6 @@
 import Post from "../component/post";
 import { useState,useEffect } from "react";
+import NavBar from '../Navigation/NavBar';
 
 export default function IndexPage(){
     const [posts,setPosts] = useState([]);
@@ -13,10 +14,16 @@ export default function IndexPage(){
     },[])
     return(
         <>
-            <h1>Hello</h1>
+        <section style={{backgroundColor:'#dbfae1'}}>
+            <NavBar/>
+            <br/>
+
+            <h3 className="display-4 fs-i fw-bold text-center text-black py-1">Blogs & DIYs</h3>
             {posts.length > 0 && posts.map(post =>(
                 <Post key={post._id} {...post}/>
             ))}
+        </section>
         </>
     )
 }
+

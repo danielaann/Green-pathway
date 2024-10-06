@@ -42,7 +42,7 @@ const Services=()=>{
                                     on reusing materials, reducing waste, and making 
                                     environmentally friendly choices in everyday life.
                                     </p>
-                                    <a href="#" className="btn btn-primary">Check this out</a>
+                                    <a href="/post" className="btn btn-primary">Check this out</a>
                                 </div>
                             </div>
                         </div>

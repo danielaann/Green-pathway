@@ -1,11 +1,13 @@
 const Post = require('../models/Post');
 const fs = require('fs');
+const multer= require('multer');
 
 // Create a new post with file upload
 exports.createPost = async (req, res) => {
   console.log('Body:',req.body);
-  const { originalname, path } = req.file;
-  const newFilePath = `${path}.${originalname.split('.').pop()}`;
+  const { originalname, path } = req.file ;
+  const extension = originalname.split('.').pop();
+  const newFilePath = `${path}.${extension}`;
   fs.renameSync(path, newFilePath);
 
   const { title, summary, content, author } = req.body;
