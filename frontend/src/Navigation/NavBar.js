@@ -14,6 +14,9 @@ const Navbar = () => {
               <a class="nav-link" href="./quiz">Game Quiz</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="./post">Blogs</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="./footprint">Carbon Footprint Calculaor</a>
             </li>
           </ul>

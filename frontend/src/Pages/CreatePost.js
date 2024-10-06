@@ -27,6 +27,7 @@ export default function CreatePost(){
     const [author,setAuthor] = useState('');
     const [files,setFiles] = useState('');
     const [redirect,setRedirect] = useState(false);
+
     async function createNewPost(e){
         const data = new FormData();
         data.set('title',title);
@@ -36,7 +37,7 @@ export default function CreatePost(){
         data.set('file',files[0]);
         e.preventDefault();
         // chech port
-        const response = await fetch('http://localhost:3000/post',{
+        const response = await fetch('http://localhost:3000/api/posts/',{
             method:'POST',
             body: data,
         });
@@ -47,7 +48,7 @@ export default function CreatePost(){
     }
 
     if(redirect){
-        <Navigate to={'/'}/>
+        return <Navigate to={'/post'}/>
     }
     
     return(
@@ -68,7 +69,7 @@ export default function CreatePost(){
                 value={author}
                 onChange={e=>setAuthor(e.target.value)}/>
             <input 
-                type='files' 
+                type='file' 
                 onChange={e=>setFiles(e.target.files)}/>
             {/* install react-quill */}
             <ReactQuill  

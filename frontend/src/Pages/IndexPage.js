@@ -1,11 +1,11 @@
-import Post from "../post";
+import Post from "../component/post";
 import { useState,useEffect } from "react";
 
 export default function IndexPage(){
     const [posts,setPosts] = useState([]);
     useEffect(()=>{
         // chech port
-        fetch('http://localhost:3000/api/post/post').then(response=>{
+        fetch('http://localhost:3000/api/posts').then(response=>{
             response.json().then(posts=>{
                 setPosts(posts)
             });
@@ -13,9 +13,10 @@ export default function IndexPage(){
     },[])
     return(
         <>
-            {posts.lenght > 0 && posts.map(post =>{
-                <Post{...post}/>
-            })}
+            <h1>Hello</h1>
+            {posts.length > 0 && posts.map(post =>(
+                <Post key={post._id} {...post}/>
+            ))}
         </>
     )
 }

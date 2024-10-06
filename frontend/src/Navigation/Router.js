@@ -14,6 +14,7 @@ import Quiz4 from '../quizes/Quiz4';
 import Calcu from '../component/CarbonFootprint';
 import CreatePost from '../Pages/CreatePost';
 import PostPage from '../Pages/PostPage';
+import IndexPage from '../Pages/IndexPage';
 
 
 const Router=()=>{
@@ -32,6 +33,7 @@ const Router=()=>{
         <Route path='/quiz4' element={<Quiz4/>}/>
         <Route path='/create' element={<CreatePost/>}/>
         <Route path ='/post/:id' element={<PostPage/>}/>
+        <Route path='/post' element={<IndexPage/>}/>
     </Routes>
     </> )
 }

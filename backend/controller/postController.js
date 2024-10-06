@@ -3,6 +3,7 @@ const fs = require('fs');
 
 // Create a new post with file upload
 exports.createPost = async (req, res) => {
+  console.log('Body:',req.body);
   const { originalname, path } = req.file;
   const newFilePath = `${path}.${originalname.split('.').pop()}`;
   fs.renameSync(path, newFilePath);

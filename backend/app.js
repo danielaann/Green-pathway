@@ -20,6 +20,8 @@ connectDB();
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
 
+app.use('/uploads',express.static(__dirname + '/uploads'))
+
 // Start the server
 app.listen(3000, () => {
   console.log('Server running on port 3000');
@@ -108,7 +110,6 @@ app.listen(3000, () => {
 //     res.json(postDoc)
 // })
 
-// app.use('/uploads',express.static(__dirname + '/uploads'))
 
 // app.listen(3000,()=>{
 //     console.log('Port connecvted');

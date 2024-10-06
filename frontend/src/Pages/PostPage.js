@@ -4,15 +4,15 @@ import { useParams } from "react-router-dom";
 
 export default function PostPage(){
     const [postInfo,setPostInfo] = useState(null);
-    const {_id} = useParams();
+    const {id} = useParams();
+
     useEffect(()=>{
-        // chech port
-        fetch(`http://localhost:3000/post/${_id}`).then(response=>{
+        fetch(`http://localhost:3000/api/posts/${id}`).then(response=>{
             response.json().then(postInfo=>{
                 setPostInfo(postInfo);
             });
         });
-    }, []);
+    }, [id]);
 
     if(!postInfo){
         return '';
@@ -20,7 +20,7 @@ export default function PostPage(){
     return(
         <div>
             <div>
-            <img src={`http://localhost:3000/${postInfo.cover}`}alt=""/>
+            <img src={`http://localhost:3000/${postInfo.cover}`}alt="Post Cover"/>
             </div>
             <h1>{postInfo.title}</h1>
             {/* dangerouslySetInnerHTML-->This is a special React property used to inject raw HTML into a React component.
